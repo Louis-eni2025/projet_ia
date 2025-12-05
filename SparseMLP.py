@@ -25,7 +25,7 @@ class SparseMLP(nn.Module):
         elif last_activation == "relu":
             self.last_activation = F.relu
         else:
-            raise ValueError("last_activation doit être 'elu' ou 'mish'")
+            raise ValueError("last_activation doit être 'relu', 'elu' ou 'mish'")
 
     def forward(self, x):
         # 4 premières couches avec ReLU
